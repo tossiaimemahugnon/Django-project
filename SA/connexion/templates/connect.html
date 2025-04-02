@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>S'inscrire</h1>
+        <form>
+            <div class="form-group">
+                <input type="text" id="nom" placeholder="Nom">
+            </div>
+            <div class="form-group">
+                <input type="text" id="prenom" placeholder="Prénom">
+            </div>
+           
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Mot de passe">
+            </div>
+            <input class="choix" list="options" name="choix" placeholder="Sélectionnez votre genre">
+            <datalist id="options">
+                <option value="Masculin">
+                <option value="Féminin">
+            </datalist>
+
+            <br>
+            <div class="form-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">J’accepte les termes et conditions</label>
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <p> Mon compte <a href="#">Connectez-vous </a></p>
+    </div>
+</body>
+</html>
